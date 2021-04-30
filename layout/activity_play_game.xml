@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayGame"
+    android:background="@drawable/town_street">
+
+    <TextView
+        android:id="@+id/countDown"
+        android:layout_width="277dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:background="@color/white"
+        android:ems="30"
+        android:inputType="time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/latView"
+        android:layout_width="127dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:text="@string/latitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countDown" />
+
+    <TextView
+        android:id="@+id/lonView"
+        android:layout_width="127dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:text="@string/longitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toEndOf="@+id/latView"
+        app:layout_constraintTop_toBottomOf="@+id/countDown" />
+
+    <Button
+        android:id="@+id/drinkBTN"
+        android:layout_width="129dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="8dp"
+        android:text="drink"
+        android:onClick="drinkPint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latView" />
+
+    <Button
+        android:id="@+id/homeBTN"
+        android:layout_width="129dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toEndOf="@+id/drinkBTN"
+        app:layout_constraintTop_toBottomOf="@+id/lonView" />
+
+    <TextView
+        android:id="@+id/wayView"
+        android:layout_width="283dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:text="waypoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drinkBTN" />
+
+    <TextView
+        android:id="@+id/numOfPints"
+        android:layout_width="118dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/white"
+        android:text="Pints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wayView" />
+
+    <ImageView
+        android:id="@+id/availPint"
+        android:layout_width="93dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/numOfPints"
+        app:layout_constraintTop_toBottomOf="@+id/wayView"
+        app:srcCompat="@drawable/full_pint" />
+
+    <ImageView
+        android:id="@+id/walkView"
+        android:layout_width="273dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/availPint"
+        app:srcCompat="@drawable/walk" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
